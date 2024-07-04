@@ -1,0 +1,72 @@
+{%extends "webApp/base.html" %}
+{% load crispy_forms_tags %}
+{% load static%}
+{%block content%}
+
+<div class = "row header-row " style="margin-top: 100px;">
+    <h1>ALL PRODUCTS</h1>
+</div>
+
+<div class = 'row search-row'>
+    <div class = 'col-4 search-col d-flex justify-content-end' style="margin-left: 50%;">
+        <div class="input-form" >
+            <form>
+                <input class="search-input" type = 'text' name = 'search' placeholder="Search by title" value = "{{request.GET.title}}">
+               
+                <button class = 'search-button' type="submit"><img src="{%static 'webApp/images/search1.png'%}" height="30px"></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class = "row firstRow" >
+    <div class = "col-1"></div>
+    <div class = 'col-10  productCol'>
+        
+        {%for comic in comics%}
+            <!-- Single product card -->
+            <a class = 'card-link' href="{%url 'storeMain:store-detail' comic.id%}">
+                <div class = "card">
+                        
+                        <img src="{{comic.cover.url}}" class = 'card-img' >
+
+                        <div class = 'card-body'>
+                            <h5 class = 'card-title'>{{comic.title}}</h5>
+                        
+                            <span class = 'product-price'>${{comic.price}}</span>
+                            
+                            <div class = 'button-container'>
+                                <button type = 'button' class="btn btn-sm card-add-btn">Add to cart</button>
+                            </div>
+                        </div>
+                </div>
+            </a>
+        {%endfor%}
+
+
+
+
+
+        
+    </div>
+    <div class = "col-1"></div>
+</div>
+
+
+
+<div class = 'row footer-row'>
+  <img class = 'footer-logo' src="{%static 'webApp/images/logo.jpg'%}">
+  <footer class="main-footer">
+      <ul>
+        {% if request.path != '/' %}
+          <li class="footer-item"><a href="{%url 'comicMain:comic-home'%}" class="footer-item-link">HOME</a></li>
+        {%else%}
+          <li class="footer-item"><a href="#" class="footer-item-link">HOME</a></li>
+        {%endif%}
+          <li class="footer-item"><a href="{%url 'comicMain:contact'%}" class="footer-item-link">CONTACT</a></li>
+          <li class="footer-item"><a href="{%url 'storeMain:store-home'%}" class="footer-item-link">STORE</a></li>
+      </ul>  
+  </footer>
+</div>
+{%endblock content%}

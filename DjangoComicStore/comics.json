@@ -1,0 +1,133 @@
+[
+
+
+    {
+        "title":"Gabby Gander",
+        "company":"Amoco",
+        "price" :"2.99",
+        "release_date":"01-02-1958"
+    },
+
+    {
+        "title":"Robespierre",
+        "company":"Mershaw",
+        "price" :"2.99",
+        "release_date":"02-02-1958"
+    },
+
+
+    {
+        "title":"Samson and David",
+        "company":"Super",
+        "price" :"3.99",
+        "release_date":"03-02-1958"
+    },
+    
+    {
+        "title":"Blue Beetle",
+        "company":"Super",
+        "price" :"3.99",
+        "release_date":"04-02-1958"
+    },
+
+    {
+        "title":"The Flame",
+        "company":"Super",
+        "price" :"3.99",
+        "release_date":"05-02-1958"
+    },
+
+
+    {
+        "title":"Cosmic Carson",
+        "company":"Super",
+        "price" :"2.99",
+        "release_date":"06-02-1958"
+    },
+
+
+    {
+        "title":"Dr. Doom",
+        "company":"Super",
+        "price" :"2.99",
+        "release_date":"07-02-1958"
+    },
+
+
+    {
+        "title":"Raiders of the Solar Frontier",
+        "company":"WesternText",
+        "price" :"8.99",
+        "release_date":"08-02-1958"
+    },
+
+
+
+    {
+        "title":"City of Singing Cubes",
+        "company":"WesternText",
+        "price" :"3.99",
+        "release_date":"09-02-1958"
+    },
+
+
+    {
+        "title":"Kenton of the Star Patrol",
+        "company":"Galactos",
+        "price" :"2.99",
+        "release_date":"10-02-1958"
+    },
+
+
+    {
+        "title":"Dead Mans Tale",
+        "company":"Galactos",
+        "price" :"2.99",
+        "release_date":"11-02-1958"
+    },
+
+
+    {
+        "title":"The Spider God",
+        "company":"Super",
+        "price" :"3.99",
+        "release_date":"12-02-1958"
+    },
+
+
+    {
+        "title":"Ghost Bundle",
+        "company":"Hallowed",
+        "price" :"11.99",
+        "release_date":"13-02-1958"
+    },
+
+
+    {
+        "title":"The Unknown",
+        "company":"Hallowed",
+        "price" :"2.99",
+        "release_date":"14-02-1958"
+    },
+
+    
+    {
+        "title":"the Living Ghost",
+        "company":"Hallowed",
+        "price" :"2.99",
+        "release_date":"15-02-1958"
+    },
+    
+
+    {
+        "title":"It Walked By Night",
+        "company":"Hallowed",
+        "price" :"3.99",
+        "release_date":"16-02-1958"
+    }
+
+]
+
+
+
+    

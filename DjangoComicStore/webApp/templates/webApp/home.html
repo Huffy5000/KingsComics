@@ -1,0 +1,111 @@
+{% extends "webApp/base.html" %}
+{% load static%}
+{% load crispy_forms_tags %}
+
+{%block additional_styles %}
+<style>
+  .navbar{
+    background: transparent;
+  }
+
+</style>
+{%endblock%}
+{%block content%}
+<div class="row home-bg" >
+    <div class="sub-home-bg">
+        <h1  class = 'sub-home-header'>
+          AUSTRALIA'S VINTAGE COMIC & GRAPHIC NOVEL HQ
+        </h1>
+        <hr  class = 'sub-home-line'>
+        <p class = 'sub-home-text'>
+          King's comics prides itself on maintaing soft copies of and bringing light to vintage comics that should be preserved. With a true passion for delivering 
+          a positive consumer experience we invite you to start reading with us!
+        </p>
+
+        <button class="arrow-btn">
+          <svg height="1.2em" class="arrow" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></svg>
+        </button>
+
+    </div>
+</div>
+
+<!-- Testing white background -->
+<div class="row featured-row">
+  <div class = 'featured-text'>
+    <h1 class = 'featured-header'> MAY. 22ND</h1>
+    <hr class= 'featured-line'>
+    <h3 class = 'featured-subheader'> <span>NEW<span> RELEASES</h3>
+    <a href="{%url 'storeMain:store-home'%}"><button class="featured-button">VIEW ALL COMICS</button></a>
+  </div>
+
+
+  <img class = 'featured-char-img' src="{% static 'webApp/images/home_char.png' %}">
+  <img class = 'featured-char-img2' src="{% static 'webApp/images/home_char2.png'%}">
+  <img class = 'featured-char-img3' src="{% static 'webApp/images/home_char3.png'%}">
+  <a  class='featured-comic comic-lrg' id="comic-lrg1" href="{%url 'storeMain:store-detail' featured_comics.5.id %}"><img  class = "featured-img" src="{{featured_comics.5.cover.url}}"></a>
+  <a  class='featured-comic comic-med' id="comic-med1" href="{%url 'storeMain:store-detail' featured_comics.0.id %}"><img  class = "featured-img" src="{{featured_comics.0.cover.url}}"></a>
+  <a  class='featured-comic comic-med' id="comic-med2" href="{%url 'storeMain:store-detail' featured_comics.2.id %}"><img  class = "featured-img" src="{{featured_comics.2.cover.url}}"></a>
+  <a  class='featured-comic comic-sml' id="comic-sml1" href="{%url 'storeMain:store-detail' featured_comics.4.id %}"><img  class = "featured-img" src="{{featured_comics.4.cover.url}}"></a>
+</div>
+
+<div class = 'row popular-bg'>
+    <h3 class="popularchoices-text-header">OUR MOST </h3>
+    <h1 class="popularchoices-text">POPULAR CHOICES</h1>
+    <hr class="popularchoices-line">
+    <div class = 'popularchoices-image-container col-10 '>
+      {%for comic in popular_comics%}
+      <a href="{%url 'storeMain:store-detail' comic.id%}" style="text-decoration: none; margin-right: 50px; margin-left: 80px;">
+        <div class = "card popular-comic" style="background-color: transparent; color: white;">
+            <img src="{{comic.cover.url}}" class = 'card-img' >
+
+            <div class = 'card-body'>
+                <h5 class = 'card-title'>{{comic.title}}</h5>
+            </div>
+        </div>
+      </a>
+      {%endfor%}
+    </div>
+</div>
+
+<div id='newsletter-section'class = 'row newsletter-form'>
+  <div class = 'col-8'>
+    <h3>DON'T MISS NEW RELEASES!</h3>
+    <h1>NEWSLETTER SIGNUP</h1>
+    <hr>
+    <form method="post">
+      {%csrf_token%}
+      
+      <div class = 'newsletter-form-inputs'>
+        {{form.name|as_crispy_field}}
+        {{form.email|as_crispy_field}}
+      </div>
+
+      <button>
+        <span>SIGN ME UP!</span>
+      </button>  
+    </form>
+  </div>
+</div>
+
+
+<div class = 'row footer-row'>
+  <img class = 'footer-logo' src="{%static 'webApp/images/logo.jpg'%}">
+  <footer class="main-footer">
+      <ul>
+        {% if request.path != '/' %}
+          <li class="footer-item"><a href="{%url 'comicMain:comic-home'%}" class="footer-item-link">HOME</a></li>
+        {%else%}
+          <li class="footer-item"><a href="#" class="footer-item-link">HOME</a></li>
+        {%endif%}
+          <li class="footer-item"><a href="{%url 'comicMain:contact'%}" class="footer-item-link">CONTACT</a></li>
+          <li class="footer-item"><a href="{%url 'storeMain:store-home'%}" class="footer-item-link">STORE</a></li>
+      </ul>  
+  </footer>
+</div>
+
+
+
+
+
+
+{%endblock content%}

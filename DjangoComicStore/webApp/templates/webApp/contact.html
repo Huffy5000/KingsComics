@@ -1,0 +1,26 @@
+{%extends "webApp/base.html" %}
+{% load crispy_forms_tags %}
+
+{%block content%}
+
+<div class = 'row  contact-row'>
+    <div class = 'col-8 ' style="margin-left: 375px;">
+
+        <div class = 'content-section pt-5'>
+            <legend class = 'border-bottom mb-4 auth-header'>CONTACT US</legend>
+            <form method = "POST">
+                {% csrf_token %}
+
+                <fieldset class = 'form-group' style="padding-left: 100px;">
+                    {{form|crispy}}
+
+                <button class = 'border-2 auth-submit'  type="submit">
+                    <span class="auth-submit-text">Submit</span>
+                </button>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+{%endblock content%}

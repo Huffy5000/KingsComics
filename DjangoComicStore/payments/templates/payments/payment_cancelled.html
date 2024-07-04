@@ -1,0 +1,8 @@
+{%extends "webApp/base.html" %}
+{% load crispy_forms_tags %}
+
+{%block content%}
+<h1>There was an error with the payment</h1>
+<h3>No funds were deductd form your account</h3>
+<a class = 'link-underline-primary' href="{%url 'storeMain:store-home'%}">Return to store </a>
+{%endblock%}

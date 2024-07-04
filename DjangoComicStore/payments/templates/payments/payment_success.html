@@ -1,0 +1,8 @@
+{%extends "webApp/base.html" %}
+{% load crispy_forms_tags %}
+
+{%block content%}
+<h1>The payment is sucessful!</h1>
+<h3>Thankyou for shopping with us</h3>
+<a class = 'link-underline-primary' href="{%url 'storeMain:store-home'%}">Return to store </a>
+{%endblock%}

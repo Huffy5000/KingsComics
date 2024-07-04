@@ -1,0 +1,28 @@
+{%extends "webApp/base.html" %}
+{% load static%}
+{%block content%}
+    <div class = "row header-row mb-5 mt-5">
+        <div class = 'col-10 offset-1 d-flex justify-content-center'>
+            <h1 class = 'bookshelf-header'>YOUR BOOKSHELF</h1>
+        </div>
+    </div>
+
+    <div class = "row firstRow">
+        <div class = "col-1"></div>
+        <div class = 'col-10 mt-3 productCol '>
+            
+            {%for comic in bookshelf%}
+                
+                <a class = 'card-link' href="{% url 'bookshelf_reader' comic.id%}">
+                    <div class = "card">
+                            <img src="{{comic.cover.url}}" class = 'card-img' height="450px" width="200px">
+                            <div class = 'card-body mt-3'>
+                                <h5 class = 'card-title'>{{comic.title}}</h5>
+                            </div>
+                    </div>
+                </a>
+            {%endfor%}
+        </div>
+        
+    </div>
+{%endblock%}

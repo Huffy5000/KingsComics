@@ -1,0 +1,298 @@
+
+.product-container{
+    position:fixed;
+   
+}
+
+.header-row{
+    width: 100%;
+    text-align: center;
+}
+
+.header-row h1{
+    font-family: 'Archivo Black',serif;
+}
+
+
+.header-col-cart{
+    width: 1000px;
+}
+
+/* Searhc bar */
+
+.search-input{
+    border: none; 
+    background-color: transparent;
+    padding: 5px 0px 5px 10px;
+    font-family: 'Nunito';
+}
+
+.input-form{
+    border:2px solid black;
+    border-radius:30px;
+}
+.search-button{
+    border: none;
+    padding:none;
+    background-color: transparent;
+}
+
+.search-input:focus{
+    outline: none;
+}
+
+.search-row{
+    margin-top:50px;
+}
+
+a{
+    color: black;
+}
+
+/* Products */
+.productCol{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding:30px 0px 0px 120px
+    
+    
+}
+
+.card{
+    
+    border: none;
+    height:300px;
+    width:250px;
+    padding-bottom: 400px;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+
+.card:hover .card-img{
+    transform:scale(1.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+    
+
+}
+
+
+.store-header{
+    margin-bottom: -50px;
+}
+
+
+.card-img{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border:solid 1px black;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+
+}
+
+.spacing{
+    height:400px;
+}
+
+.button-container{
+    display: inline-block;
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 110px;
+    
+    background-color: green;
+    border: solid 1px green;
+    border-radius: 1cm;
+}
+
+.card-link{
+    text-decoration: none;
+    margin-bottom: 150px;
+    background: transparent;
+    margin:0 100px 150px 0
+    
+    
+}
+
+.card-body{
+    margin-top:5px;
+    padding-top: 0px;
+    padding-left: 2px;
+    padding-right: 0;
+    background-color: transparent ;
+    
+
+}
+
+.card:hover .card-body{
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(10px);
+
+}
+
+
+.card-add-btn{
+    
+    margin-top:0px;
+    padding-top:0px;
+    padding-left:20px;
+    color: white;
+}
+
+.card-add-btn:focus{
+    border:none;
+    outline: none;
+    
+}
+
+.product-price{
+    display: inline-block;
+    margin-right: 95px;
+}
+
+.product-container{
+    position:relative;
+   
+}
+
+
+.detailed-row{
+    margin-top:100px;
+    
+}
+
+.productCol{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+}
+
+.back-image{
+    transform:rotate(180deg); 
+    margin-left: 200px; 
+    transition: all ease 0.5s;
+}
+
+.detail-img{
+    
+
+    border:solid 1px black;
+}
+
+.button-container{
+    display: inline-block;
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 110px;
+    
+    background-color: green;
+    border: solid 1px green;
+    border-radius: 1cm;
+}
+
+
+.detail-price{
+    margin-top:50px;
+}
+
+.detail-cart-btn{
+    margin-top:25px;
+    background: green;
+    opacity: 1;
+}
+
+.detail-cart-btn:hover{
+    background: green;
+    opacity: 0.7;
+}
+
+.img-col{
+    display:flex;
+    justify-content: center;
+    height:600px;
+    padding-right: 175px;
+    
+
+
+    
+}
+
+.detailed-description-header{
+    padding-top:50px;
+    
+}
+
+.detailed-returns-header{
+    margin-top:15px;
+}
+
+
+.cart-item{
+    border-bottom: 1px solid black;
+    display:inline-block;
+    padding-bottom: 5px;
+    text-decoration: none;
+   
+    
+    
+}
+
+.cart-item:hover{
+    cursor:pointer;
+}
+
+
+
+.cart-item-img{
+    height:70px;
+    display:inline-block;
+}
+
+.remove-item-form{
+    display:inline-block;
+}
+
+.cart-item-title{
+    display: inline-block;
+    margin-left:40px;
+    width:700px;
+}
+
+.cart-item-price{
+    display:inline-block;
+    
+}
+
+
+.remove-item{
+    display:inline-block;
+    margin-left:50px;
+    border: none;
+    padding:0;
+    background-color: white;
+    
+    
+}
+
+/* To change */
+.remove-item:hover{
+    background-color: black;
+}
+
+.cart-item-row{
+    margin-top:50px;
+    
+
+}
+
+.cart-header{
+    margin-bottom: 10px;
+}
+

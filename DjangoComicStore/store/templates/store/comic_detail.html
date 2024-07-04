@@ -1,0 +1,35 @@
+{%extends "webApp/base.html" %}
+{% load crispy_forms_tags %}
+{% load static%}
+{%block content%}
+
+
+<div class = 'row detailed-row'>
+    <a href="{{back_url}}">
+        <btn class="back-button">
+            <img class="back-image" src="{%static 'webApp/images/icons8-arrow-50.png' %}" width="40px" >
+        </btn>
+    </a>
+    <div class = 'img-col col-3 offset-3 '>
+                
+            <img class = 'detail-img' src="{{object.cover.url}}">
+
+    </div>
+    <div class = 'col-4 '>
+        <h1 class="detail-title">{{object.title}}</h1>
+        <small class = "text-muted"> Released on {{object.release_date|date:"M d, Y"}} by {{object.company}}</small>
+        <h5 class = 'detail-price'>${{object.price}}</h5>
+
+        <form method="post" action = '{% url "storeMain:add-cart" object.id %}'>
+            {% csrf_token %}
+            <button class="detail-cart-btn btn btn-secondary" >Add to cart <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256"><path fill="#ffffff" d="m220.24 132.24l-72 72a6 6 0 0 1-8.48-8.48L201.51 134H40a6 6 0 0 1 0-12h161.51l-61.75-61.76a6 6 0 0 1 8.48-8.48l72 72a6 6 0 0 1 0 8.48"></path></svg></button>
+        </form>
+        <dt class = 'detailed-description-header'>Description</dt>
+        <dd class = 'detailed-description-content'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </dd>
+
+        <dt class = 'detailed-returns-header'>Returns</dt>
+        <dd class = 'detailed-returns-content'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</dd>
+    </div>
+</div>
+{%endblock content%}
+    

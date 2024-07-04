@@ -1,0 +1,46 @@
+{%extends "webApp/base.html" %}
+{% load crispy_forms_tags %}
+
+{%block content%}
+
+
+<div class = 'row auth-row'>
+    <div class = 'col-10 form-col'>
+        <div class = 'content-section form-data'>
+            <form method = "POST">
+                {% csrf_token %}
+
+                <fieldset class = 'form-group'>
+                    <legend class = 'form-legend border-bottom mb-4'><span class = 'auth-header'>Sign Up!</span></legend>
+                    
+                    <div class = 'fieldWrapper'>
+                        {{form.username|as_crispy_field}}
+                    </div>
+
+                    <div class = 'fieldWrapper'>
+                        {{form.email|as_crispy_field }}
+                    </div>
+
+                    <div class = 'fieldWrapper'>
+                        {{form.password1|as_crispy_field }}
+                    </div>
+
+                    <div class = 'fieldWrapper'>
+                        {{form.password2|as_crispy_field }}
+                    </div>
+
+                </fieldset>
+
+                <button class = 'border-2 auth-submit'  type="submit">
+                    <span class="auth-submit-text">Submit</span>
+                </button>
+
+            </form>
+
+            <div class  = 'border-top top10 pt-2'>
+                <span class = 'text-muted auth-text'>Already have an account? <a class = 'ml-2 signInLink' style="padding-left: 10px; color: #008a89;" href="{%url 'login'%}">Sign in here</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock content%}
