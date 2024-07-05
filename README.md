@@ -33,7 +33,14 @@ pip install -r /path/to/requirements.txt
    git clone https://github.com/Huffy5000/KingsComics.git
    ```
 3. Install the requirements file as stated above
-4. Set your API key as an environment variable
+4. Set your API key as an environment variable with the following names
+   ```py
+      #Private Key as 'STRIPE_API_PRIVATE_KEY'
+      STRIPE_API_PRIVATE_KEY = os.environ.get('STRIPE_API_PRIVATE_KEY')
+
+      #Public Key as 'STRIPE_API_PUBLISHABLE_KEY'
+      STRIPE_API_PUBLISHABLE_KEY = os.environ.get("STRIPE_API_PUBLISHABLE_KEY")
+   ```
 
 
 
