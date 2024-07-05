@@ -26,5 +26,15 @@ First you must install all the dependencies required to run the project locally
 pip install -r /path/to/requirements.txt
 ```
 
+### Installation
+1. Get a free API key [https://docs.stripe.com/](https://docs.stripe.com/)
+2. Clone the repo
+   ```bash
+   git clone https://github.com/Huffy5000/KingsComics.git
+   ```
+3. Install the requirements file as stated above
+4. Set your API key as an environment variable
+
+
 
 
