@@ -7,11 +7,24 @@ King's Comics is a virtual comic book store where users can browse a collection 
 https://github.com/Huffy5000/KingsComics/assets/126332949/864195b9-b798-4953-a955-1f334cecc6ef
 
 
-## Built With
+### Built With
 * Django
 * Django-Crispy-Forms
 * Bootstrap
 * JavaScript
 * HTML
 * CSS
-  
+
+
+## Getting Started
+
+###Prerequisites
+First you must install all the dependencies required to run the project locally 
+*pip
+```bash
+#Install the required packages in the requirements.txt file
+pip install -r /path/to/requirements.txt
+```
+
+
+
