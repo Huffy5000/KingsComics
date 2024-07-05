@@ -18,7 +18,7 @@ https://github.com/Huffy5000/KingsComics/assets/126332949/864195b9-b798-4953-a95
 
 ## Getting Started
 
-###Prerequisites
+### Prerequisites
 First you must install all the dependencies required to run the project locally 
 *pip
 ```bash
