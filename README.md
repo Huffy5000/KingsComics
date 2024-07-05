@@ -6,12 +6,12 @@ King's Comics is a virtual comic book store where users can browse a collection 
 
 https://github.com/Huffy5000/KingsComics/assets/126332949/864195b9-b798-4953-a955-1f334cecc6ef
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Built With
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-<div >
+* Django
+* Django-Crispy-Forms
+* Bootstrap
+* JavaScript
+* HTML
+* CSS
   
-</div>
-
-[Bootstrap-url]: https://getbootstrap.com
