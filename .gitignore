@@ -64,16 +64,8 @@ db.sqlite3-journal
 *.pyc
 __pycache__/
 migrations/
+vercel.json
 
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
 
 # PyBuilder
 .pybuilder/
