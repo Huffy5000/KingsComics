@@ -15,7 +15,7 @@ STRIPE_API_PRIVATE_KEY = os.environ.get('STRIPE_API_PRIVATE_KEY')
 STRIPE_API_PUBLISHABLE_KEY = os.environ.get("STRIPE_API_PUBLISHABLE_KEY")
 
 stripe.api_key = STRIPE_API_PRIVATE_KEY
-endpoint_secret = os.environ.get("KINGSCOMICS_ENDPOINT_SECRET")
+endpoint_secret = str(os.environ.get('KINGSCOMICS_ENDPOINT_SECRET'))
 
 @login_required
 def create_checkout_session(request):
