@@ -18,29 +18,7 @@ https://github.com/Huffy5000/KingsComics/assets/126332949/864195b9-b798-4953-a95
 
 ## Getting Started
 
-### Prerequisites
-First you must install all the dependencies required to run the project locally 
-* pip
-```bash
-#Install the required packages in the requirements.txt file
-pip install -r /path/to/requirements.txt
-```
 
-### Installation
-1. Get a free API key [https://docs.stripe.com/](https://docs.stripe.com/)
-2. Clone the repo
-   ```bash
-   git clone https://github.com/Huffy5000/KingsComics.git
-   ```
-3. Install the requirements file as stated above
-4. Set your API key as an environment variable with the following names
-   ```py
-      #Private Key as 'STRIPE_API_PRIVATE_KEY'
-      STRIPE_API_PRIVATE_KEY = os.environ.get('STRIPE_API_PRIVATE_KEY')
-
-      #Public Key as 'STRIPE_API_PUBLISHABLE_KEY'
-      STRIPE_API_PUBLISHABLE_KEY = os.environ.get("STRIPE_API_PUBLISHABLE_KEY")
-   ```
 
 
 
