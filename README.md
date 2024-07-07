@@ -16,6 +16,10 @@ King's Comics is a virtual comic book store where users can browse a collection 
 
 https://github.com/Huffy5000/KingsComics/assets/126332949/d44fd055-4e51-46d3-a22e-2f752d35aec4
 
+Once the comics have been purchased, they will be put in your bookshelf ready to read!
+![image](https://github.com/Huffy5000/KingsComics/assets/126332949/ce869faf-4ea0-48aa-933e-202dd1c78b34)
+
+
 
 
 
