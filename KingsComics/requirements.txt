@@ -1,5 +1,5 @@
 crispy-bootstrap5==2023.10
-Django==5.0
+Django==5.0.8
 django-crispy-forms==2.1
 django-session-timeout==0.1.0
 stripe==8.1.0
